@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: "software"
+authors:
+  - family-names: "Van Eck"
+    given-names: "Nees Jan"
+    orcid: "https://orcid.org/0000-0001-8448-4521"
+    email: "ecknjpvan@cwts.leidenuniv.nl"
+    affiliation: "Centre for Science and Technology Studies (CWTS), Leiden University"
+title: "publicationclassificationlabeling"
+abstract: "This Java package can be used to obtain labels for clusters of scientific publications."
+keywords:
+  - publication classification labeling
+  - publication classification
+  - scientific publications
+  - clustering
+  - clusters
+  - labeling
+  - labels
+  - GPT-3.5
+  - GPT-4
+  - Java
+url: "https://github.com/CWTSLeiden/publicationclassificationlabeling#readme"
+repository-code: "https://github.com/CWTSLeiden/publicationclassificationlabeling"
+repository-artifact: "https://central.sonatype.com/artifact/nl.cwts/publicationclassificationlabeling/"
+license: MIT
+version: 1.0.0
+date-released: 2024-01-22
