@@ -2,6 +2,7 @@
 
 [![Build main branch](https://github.com/CWTSLeiden/publicationclassificationlabeling/actions/workflows/build-main.yml/badge.svg)](https://github.com/CWTSLeiden/publicationclassificationlabeling/actions/workflows/build-main.yml)
 [![License: MIT](https://badgen.net/github/license/CWTSLeiden/publicationclassificationlabeling?label=License&color=yellow)](https://github.com/CWTSLeiden/publicationclassificationlabeling/blob/main/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10552263.svg)](https://doi.org/10.5281/zenodo.10552263)
 
 ## Introduction
 
