@@ -24,5 +24,6 @@ url: "https://github.com/CWTSLeiden/publicationclassificationlabeling#readme"
 repository-code: "https://github.com/CWTSLeiden/publicationclassificationlabeling"
 repository-artifact: "https://central.sonatype.com/artifact/nl.cwts/publicationclassificationlabeling/"
 license: MIT
+doi: 10.5281/zenodo.10552263
 version: 1.0.0
 date-released: 2024-01-22
