@@ -2,6 +2,7 @@
 
 [![Build main branch](https://github.com/CWTSLeiden/publicationclassificationlabeling/actions/workflows/build-main.yml/badge.svg)](https://github.com/CWTSLeiden/publicationclassificationlabeling/actions/workflows/build-main.yml)
 [![License: MIT](https://badgen.net/github/license/CWTSLeiden/publicationclassificationlabeling?label=License&color=yellow)](https://github.com/CWTSLeiden/publicationclassificationlabeling/blob/main/LICENSE)
+[![Latest release](https://badgen.net/github/release/CWTSLeiden/publicationclassificationlabeling?label=Release)](https://github.com/CWTSLeiden/publicationclassificationlabeling/releases)
 [![Maven Central version](https://badgen.net/maven/v/maven-central/nl.cwts/publicationclassificationlabeling)](https://central.sonatype.com/artifact/nl.cwts/publicationclassificationlabeling)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10552263.svg)](https://doi.org/10.5281/zenodo.10552263)
 
