@@ -1,5 +1,7 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
+    id 'signing'
     id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'com.palantir.git-version' version '3.0.0'
 }
@@ -38,4 +40,62 @@ shadowJar {
     archiveBaseName.set(project.name)
     archiveClassifier.set('')
     archiveVersion.set(project.version)
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/CWTSLeiden/publicationclassificationlabeling"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+        maven {
+            name = "OSSRH"
+            url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = System.getenv("OSSRH_USERNAME")
+                password = System.getenv("OSSRH_PASSWORD")
+            }
+        }
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            pom {
+                name = "publicationclassificationlabeling"
+                description = "Java package for obtaining labels for clusters of scientific publications."
+                url = "https://github.com/CWTSLeiden/publicationclassificationlabeling"
+                licenses {
+                    license {
+                        name = "MIT License"
+                        url = "http://www.opensource.org/licenses/mit-license.php"
+                    }
+                }
+                developers {
+                    developer {
+                        name = "Nees Jan van Eck"
+                        email = "ecknjpvan@cwts.leidenuniv.nl"
+                        url = "https://github.com/neesjanvaneck"
+                        id = "neesjanvaneck"
+                    }
+                }
+                scm {
+                    connection = "scm:git@github.com:CWTSLeiden/publicationclassificationlabeling.git"
+                    developerConnection = "scm:git@github.com:CWTSLeiden/publicationclassificationlabeling.git"
+                    url = "https://github.com/CWTSLeiden/publicationclassificationlabeling"
+                }
+            }
+        }
+    }
+}
+
+signing {
+    required { gradle.taskGraph.hasTask("publish") }
+    def signingKey = System.getenv("GPG_SIGNING_KEY")
+    def signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.mavenJava
 }
